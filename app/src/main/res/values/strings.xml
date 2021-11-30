@@ -51,9 +51,17 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <!--    Getting Started-->
+    <!-- Getting Started -->
     <string name="str_getting_started">Getting Started</string>
     <string name="str_started_title">ZonaEgg</string>
     <string name="str_started_welcome">Welcome to ZonaEgg</string>
+
+    <!-- Home -->
+    <string name="eatery_photo">Eatery Photo</string>
+    <string name="eatery_name">Eatery Photo</string>
+    <string name="eatery_category">Eatery Category</string>
+    <string name="eatery_rating">Eatery Rating</string>
+    <string name="eatery_distance">Eatery Distance</string>
+    <string name="separator">Separator</string>
 
 </resources>

@@ -3,22 +3,42 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/drawable/ic_moon.xml" value="0.37864583333333335" />
-        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/drawable/primary_back_button_focused.xml" value="0.37864583333333335" />
-        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/font/poppins.xml" value="0.2328125" />
-        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/activity_credits.xml" value="0.3625" />
-        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/activity_getting_started.xml" value="0.3625" />
-        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/activity_home.xml" value="0.20260416666666667" />
-        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/activity_login.xml" value="0.3625" />
-        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/activity_main.xml" value="0.3625" />
-        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/activity_register.xml" value="0.3625" />
-        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/activity_settings.xml" value="0.3625" />
-        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/activity_splash.xml" value="0.24635416666666668" />
-        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/fragment_splash.xml" value="0.4" />
-        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/fragment_started0.xml" value="0.3484375" />
-        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/fragment_started1.xml" value="0.3625" />
-        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/fragment_started2.xml" value="0.3625" />
-        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/fragment_started_view_pager.xml" value="0.264" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/border_bottom.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/button_background_circle.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/ic_arrow_back.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/ic_arrow_next.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/ic_back_arrow.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/ic_eye.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/ic_image.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/ic_launcher_background.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/ic_moon.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/primary_back_button.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/primary_back_button_default.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/primary_back_button_focused.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/primary_button.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/primary_button_background.xml" value="0.22" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/primary_button_default.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/primary_button_disabled.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/primary_button_focus.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/primary_button_focused.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/secondary_button.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/secondary_button_background.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/secondary_button_default.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/secondary_button_disabled.xml" value="0.19743589743589743" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/drawable/secondary_button_focused.xml" value="0.20052083333333334" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/font/oppins.xml" value="0.21458333333333332" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/font/poppins.xml" value="0.21458333333333332" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/layout/activity_credit.xml" value="0.184375" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/layout/activity_credits.xml" value="0.22" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/layout/activity_getting_started.xml" value="0.22" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/layout/activity_home.xml" value="0.184375" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/layout/activity_main.xml" value="0.15625" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/layout/activity_register.xml" value="0.16666666666666666" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/layout/activity_settings.xml" value="0.16666666666666666" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/layout/item_home_explore_card.xml" value="0.16666666666666666" />
+        <entry key="..\:/User/Projects/AndroidStudio/ZonaEgg/app/src/main/res/layout/item_home_explore_nav.xml" value="0.4466666666666667" />
       </map>
     </option>
   </component>
