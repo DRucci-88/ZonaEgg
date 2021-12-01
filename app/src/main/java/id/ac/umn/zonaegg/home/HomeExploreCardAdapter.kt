@@ -1,23 +1,35 @@
 package id.ac.umn.zonaegg.home
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.RecyclerView
+import id.ac.umn.zonaegg.EateryActivity
 import id.ac.umn.zonaegg.R
 import id.ac.umn.zonaegg.data.Eatery
 
 class HomeExploreCardAdapter (
-    private var dataSet : ArrayList<Eatery>
+    private var dataSet : ArrayList<Eatery>,
+    private val listener : HomeExploreListener
 ) : RecyclerView.Adapter<HomeExploreCardAdapter.ViewHolder>() {
-    class ViewHolder(view : View) : RecyclerView.ViewHolder(view) {
+    inner class ViewHolder(view : View) : RecyclerView.ViewHolder(view), View.OnClickListener {
         val imgEateryPhoto : ImageView = view.findViewById(R.id.home_ivExploreEateryPhoto)
         val tvEateryName : TextView = view.findViewById(R.id.home_tvExploreEateryName)
         val tvEateryCategory : TextView = view.findViewById(R.id.home_tvExploreEateryCategory)
         val tvEateryRating : TextView = view.findViewById(R.id.home_tvExploreEateryRating)
         val tvEateryDistance : TextView = view.findViewById(R.id.home_tvEateryDistance)
+
+        init {
+            view.setOnClickListener(this)
+        }
+
+        override fun onClick(p0: View?) {
+            listener.goToDetailEatery(dataSet[adapterPosition])
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -37,10 +49,5 @@ class HomeExploreCardAdapter (
     }
 
     override fun getItemCount(): Int = dataSet.size
-
-    public fun onCategorySelected(newData: ArrayList<Eatery>){
-        this.dataSet = newData
-        notifyDataSetChanged()
-    }
 
 }

@@ -8,7 +8,7 @@
 
     <!-- Back button -->
     <ImageButton
-        android:id="@+id/login_btnBack"
+        android:id="@+id/btn_go_back"
         android:contentDescription="@string/back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,7 +23,7 @@
         app:layout_constraintBottom_toTopOf="@+id/login_tvBody"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_btnBack"
+        app:layout_constraintTop_toBottomOf="@id/btn_go_back"
         style="@style/m_top_20" />
 
     <TextView

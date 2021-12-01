@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import id.ac.umn.zonaegg.R
 import id.ac.umn.zonaegg.databinding.FragmentStarted1Binding

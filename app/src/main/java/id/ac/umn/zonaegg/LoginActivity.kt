@@ -16,9 +16,9 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Back button
-        binding.loginBtnBack.setOnClickListener {
-            finish()
-        }
+//        binding.loginBtnBack.setOnClickListener {
+//            finish()
+//        }
 
         // Login button
         binding.loginBtnLogin.setOnClickListener {
