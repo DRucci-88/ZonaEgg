@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 import id.ac.umn.zonaegg.R
 import id.ac.umn.zonaegg.data.Eatery
 
-class HomeExploreCardAdapter (private val dataSet : Array<Eatery>) : RecyclerView.Adapter<HomeExploreCardAdapter.ViewHolder>() {
+class HomeExploreCardAdapter (
+    private var dataSet : ArrayList<Eatery>
+) : RecyclerView.Adapter<HomeExploreCardAdapter.ViewHolder>() {
     class ViewHolder(view : View) : RecyclerView.ViewHolder(view) {
         val imgEateryPhoto : ImageView = view.findViewById(R.id.home_ivExploreEateryPhoto)
         val tvEateryName : TextView = view.findViewById(R.id.home_tvExploreEateryName)
@@ -35,5 +37,10 @@ class HomeExploreCardAdapter (private val dataSet : Array<Eatery>) : RecyclerVie
     }
 
     override fun getItemCount(): Int = dataSet.size
+
+    public fun onCategorySelected(newData: ArrayList<Eatery>){
+        this.dataSet = newData
+        notifyDataSetChanged()
+    }
 
 }

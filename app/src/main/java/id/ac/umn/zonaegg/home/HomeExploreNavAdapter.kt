@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import id.ac.umn.zonaegg.R
 
 class HomeExploreNavAdapter (
-    private val dataSet : Array<String>
+    private var dataSet : Array<String>,
+    private val listener: HomeExploreListener
 ) : RecyclerView.Adapter<HomeExploreNavAdapter.ViewHolder>() {
     class ViewHolder(view : View) : RecyclerView.ViewHolder(view) {
         val tvNav : TextView = view.findViewById(R.id.home_tvExploreNavItem)
@@ -30,6 +31,9 @@ class HomeExploreNavAdapter (
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.tvNav.text = dataSet[position]
+        holder.tvNav.setOnClickListener{
+            listener.onChangeNav(dataSet[position])
+        }
     }
 
     override fun getItemCount(): Int = dataSet.size

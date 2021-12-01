@@ -20,7 +20,7 @@ class HomePopularSliderAdapter(
     }
     init {
         rawListPopular = listPopular.map { it.copy() } as ArrayList<Eatery>
-        Log.d("heroism","Total: ${rawListPopular.size}")
+//        Log.d("heroism","Total: ${rawListPopular.size}")
     }
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
@@ -35,7 +35,7 @@ class HomePopularSliderAdapter(
         }
 
         override fun onClick(p0: View?) {
-            Log.d("heroism", "Home Popular Slide Position : $adapterPosition")
+//            Log.d("heroism", "Home Popular Slide Position : $adapterPosition")
         }
 
     }
@@ -53,7 +53,7 @@ class HomePopularSliderAdapter(
         holder.ratingPopular.text = listPopular[position].rating
         holder.distancePopular.text = listPopular[position].distance.toString()
         holder.imagePopular.setImageResource(listPopular[position].photoUrl)
-        Log.d("heroism","Position : ${position.toString()}, Size: ${listPopular.size}")
+//        Log.d("heroism","Position : ${position.toString()}, Size: ${listPopular.size}")
         if(listPopular.size == rawListPopular.size * 6)
             viewPager.post(runnableReset)
         else if(position == listPopular.size - 2)
@@ -65,9 +65,9 @@ class HomePopularSliderAdapter(
 
     private val runnableReset = Runnable {
         kotlin.run {
-            Log.d("heroism","Reset")
+//            Log.d("heroism","Reset")
             listPopular.clear()
-            Log.d("heroism", rawListPopular.toString())
+//            Log.d("heroism", rawListPopular.toString())
             listPopular.addAll(rawListPopular)
 
             this.notifyItemRangeChanged(0, listPopular.size)
@@ -78,7 +78,7 @@ class HomePopularSliderAdapter(
 
     private val runnable = Runnable {
         kotlin.run {
-            Log.d("heroism","Add")
+//            Log.d("heroism","Add")
             listPopular.addAll(rawListPopular)
             this.notifyItemRangeChanged(0, (listPopular.size/2))
 //            this.notifyDataSetChanged()

@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".home.HomePopularSliderFragment">
 
-
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/slider_home_popular"
         android:layout_width="match_parent"
