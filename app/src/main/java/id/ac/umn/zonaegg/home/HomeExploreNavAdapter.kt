@@ -1,4 +1,4 @@
-package id.ac.umn.zonaegg
+package id.ac.umn.zonaegg.home
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,8 +6,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import id.ac.umn.zonaegg.R
 
-class HomeExploreNavAdapter (private val dataSet : Array<String>) : RecyclerView.Adapter<HomeExploreNavAdapter.ViewHolder>() {
+class HomeExploreNavAdapter (
+    private val dataSet : Array<String>
+) : RecyclerView.Adapter<HomeExploreNavAdapter.ViewHolder>() {
     class ViewHolder(view : View) : RecyclerView.ViewHolder(view) {
         val tvNav : TextView = view.findViewById(R.id.home_tvExploreNavItem)
 
@@ -29,7 +32,6 @@ class HomeExploreNavAdapter (private val dataSet : Array<String>) : RecyclerView
         holder.tvNav.text = dataSet[position]
     }
 
-    override fun getItemCount(): Int {
-        return dataSet.size
-    }
+    override fun getItemCount(): Int = dataSet.size
+
 }

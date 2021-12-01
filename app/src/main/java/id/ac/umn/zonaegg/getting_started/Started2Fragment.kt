@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import id.ac.umn.zonaegg.HomeActivity
-import id.ac.umn.zonaegg.R
 import id.ac.umn.zonaegg.databinding.FragmentStarted2Binding
 
 class Started2Fragment : Fragment() {

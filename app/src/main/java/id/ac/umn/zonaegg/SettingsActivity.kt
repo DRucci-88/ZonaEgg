@@ -32,8 +32,8 @@ class SettingsActivity : AppCompatActivity() {
 
         // Getting started button
         binding.settingsBtnGettingStarted.setOnClickListener {
-            val gettingStarted = Intent(this, GettingStartedActivity::class.java)
-            startActivity(gettingStarted)
+//            val gettingStarted = Intent(this, GettingStartedActivity::class.java)
+//            startActivity(gettingStarted)
         }
 
         // Homepage button

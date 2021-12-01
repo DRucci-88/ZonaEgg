@@ -6,5 +6,5 @@ data class Eatery(
     var category: String,
     var rating: String,
     var distance: Float,
-    var photoUrl: String
+    var photoUrl: Int
 )
