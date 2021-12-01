@@ -21,14 +21,6 @@
         <item name="backgroundTint">@null</item>
     </style>
 
-    <style name="backButton">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">20dp</item>
-        <item name="android:layout_marginStart">20dp</item>
-        <item name="android:src">@drawable/ic_arrow_back</item>
-    </style>
-
     <style name="primaryBackButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -37,6 +29,28 @@
         <item name="android:src">@drawable/ic_arrow_back</item>
         <item name="android:background">@drawable/primary_back_button</item>
         <item name="tint">?colorPrimary</item>
+    </style>
+
+    <style name="backButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:src">@drawable/ic_arrow_back</item>
+        <item name="android:background">@drawable/primary_back_button_default</item>
+        <item name="tint">?neutral9</item>
+        <item name="backgroundTint">?neutral0</item>
+    </style>
+
+    <style name="favoriteButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:src">@drawable/ic_favorite_outline</item>
+        <item name="android:background">@drawable/primary_back_button_default</item>
+        <item name="tint">?neutral9</item>
+        <item name="backgroundTint">?neutral0</item>
     </style>
 
     <style name="formEditText">
