@@ -10,8 +10,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import id.ac.umn.zonaegg.HomeActivity
 import id.ac.umn.zonaegg.R
 import id.ac.umn.zonaegg.Testing1Activity
+import id.ac.umn.zonaegg.Testing2Activity
 import id.ac.umn.zonaegg.databinding.FragmentSplashBinding
 
 class SplashFragment : Fragment() {
@@ -31,7 +33,8 @@ class SplashFragment : Fragment() {
         Handler(Looper.getMainLooper()).postDelayed({
             if (checkGettingStartedStatus()){
 //                val intent = Intent(requireContext(), HomeActivity::class.java)
-                val intent = Intent(requireContext(), Testing1Activity::class.java)
+//                val intent = Intent(requireContext(), Testing1Activity::class.java)
+                val intent = Intent(requireContext(), Testing2Activity::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 requireActivity().startActivity(intent)
             }

@@ -8,22 +8,22 @@ import androidx.core.view.marginTop
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.appbar.AppBarLayout
 import id.ac.umn.zonaegg.data.Serving
-import id.ac.umn.zonaegg.databinding.ActivityTestingBinding
+import id.ac.umn.zonaegg.databinding.ActivityTesting1Binding
 import id.ac.umn.zonaegg.eatery_detail.EateryAdapter
 
 class Testing1Activity : AppCompatActivity() {
 
-    private lateinit var bind: ActivityTestingBinding
+    private lateinit var bind: ActivityTesting1Binding
 
     private val servingData : ArrayList<Serving> = arrayListOf(
-//        Serving("1","Ikan Gurame Sambla Pete",40000F, R.drawable.ikan_gurame_sambal_pete),
-//        Serving("2","Nasi Ayam sambal pete",35000F, R.drawable.nasi_ayam_sambel_pete),
-//        Serving("3","Udang Sambal Pete",20000F, R.drawable.udang_sambel_pete)
+        Serving("1","Ikan Gurame Sambla Pete",40000F, R.drawable.ikan_gurame_sambal_pete),
+        Serving("2","Nasi Ayam sambal pete",35000F, R.drawable.nasi_ayam_sambel_pete),
+        Serving("3","Udang Sambal Pete",20000F, R.drawable.udang_sambel_pete)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bind = ActivityTestingBinding.inflate(layoutInflater)
+        bind = ActivityTesting1Binding.inflate(layoutInflater)
         setContentView(bind.root)
 
         setSupportActionBar(bind.testingToolbar)
@@ -33,7 +33,7 @@ class Testing1Activity : AppCompatActivity() {
             Log.d("Testing", bind.testingCollapsingToolbar.scrimVisibleHeightTrigger.toString())
             if (verticalOffset <= -600) {
                 bind.testingCollapsingToolbar.title = "Pondok Makan"
-                bind.testingRvServing
+
             }
             else
                 bind.testingCollapsingToolbar.title = ""
