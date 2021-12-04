@@ -14,7 +14,7 @@
         android:padding="10dp"
         android:textColor="?colorPrimary"
         android:textStyle="bold"
-        android:background="@drawable/secondary_button_default"
+        android:background="@drawable/nav_button"
         tools:text="Restaurant"
         />
 
