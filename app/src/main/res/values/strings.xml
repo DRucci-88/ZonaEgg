@@ -66,5 +66,12 @@
 
     <!-- Eatery -->
     <string name="add_to_favorites">Add to favorites</string>
+    <string name="rating">Rating</string>
+    <string name="view_all_reviews">View all reviews</string>
+    <string name="digit_one">1</string>
+    <string name="digit_two">2</string>
+    <string name="digit_three">3</string>
+    <string name="digit_four">4</string>
+    <string name="digit_five">5</string>
 
 </resources>
