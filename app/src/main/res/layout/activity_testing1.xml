@@ -67,7 +67,7 @@
                     app:layout_collapseMode="pin" />
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/testng_card_view"
+                    android:id="@+id/testing_card_view"
                     android:layout_width="match_parent"
                     android:layout_height="130dp"
                     android:layout_marginHorizontal="30dp"
@@ -88,7 +88,7 @@
                         android:weightSum="3">
 
                         <TextView
-                            android:id="@+id/name"
+                            android:id="@+id/testing_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -98,7 +98,7 @@
                             tools:text="Pondok Makan" />
 
                         <TextView
-                            android:id="@+id/category"
+                            android:id="@+id/testing_category"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -121,7 +121,7 @@
                                 android:src="@drawable/ic_menu_book" />
 
                             <TextView
-                                android:id="@+id/home_ivEateryPrice"
+                                android:id="@+id/testing_price"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="4dp"
@@ -144,7 +144,7 @@
                                 android:src="@drawable/ic_wallet" />
 
                             <TextView
-                                android:id="@+id/home_tvEateryDistance"
+                                android:id="@+id/testing_range"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="4dp"
@@ -169,7 +169,7 @@
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/testing_rv_serving"
+        android:id="@+id/testing_serving"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"

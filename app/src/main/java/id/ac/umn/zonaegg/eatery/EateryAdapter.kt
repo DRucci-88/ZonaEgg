@@ -1,4 +1,4 @@
-package id.ac.umn.zonaegg.eatery_detail
+package id.ac.umn.zonaegg.eatery
 
 import android.view.LayoutInflater
 import android.view.View
@@ -13,9 +13,9 @@ class EateryAdapter(
 ) : RecyclerView.Adapter<EateryAdapter.MyViewHolder>() {
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val bind = ItemEateryFoodBinding.bind(itemView)
-        val nameEatery = bind.homeIvEateryName
-        val priceEatery = bind.homeIvEateryPrice
-        val photoEatery = bind.homeIvEateryPhoto
+        val nameEatery = bind.tvNameItemEatery
+        val priceEatery = bind.tvPriceItemEatery
+        val photoEatery = bind.ivImageItemEatery
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {

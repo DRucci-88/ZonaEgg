@@ -18,7 +18,7 @@ class HomeExploreCardAdapter (
         val tvEateryName : TextView = view.findViewById(R.id.home_tvExploreEateryName)
         val tvEateryCategory : TextView = view.findViewById(R.id.home_tvExploreEateryCategory)
         val tvEateryRating : TextView = view.findViewById(R.id.home_tvExploreEateryRating)
-        val tvEateryDistance : TextView = view.findViewById(R.id.home_tvEateryDistance)
+        val tvEateryDistance : TextView = view.findViewById(R.id.tv_range_eatery)
 
         init {
             view.setOnClickListener(this)

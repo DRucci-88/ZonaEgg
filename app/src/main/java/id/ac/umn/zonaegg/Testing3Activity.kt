@@ -3,18 +3,17 @@ package id.ac.umn.zonaegg
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.ContextMenu
 import android.view.Menu
-import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.appbar.AppBarLayout
 import id.ac.umn.zonaegg.data.Serving
 import id.ac.umn.zonaegg.databinding.ActivityTesting2Binding
-import id.ac.umn.zonaegg.eatery_detail.EateryAdapter
+import id.ac.umn.zonaegg.databinding.ActivityTesting3Binding
+import id.ac.umn.zonaegg.eatery.EateryAdapter
 
 class Testing3Activity : AppCompatActivity() {
 
-    private lateinit var bind: ActivityTesting2Binding
+    private lateinit var bind: ActivityTesting3Binding
     private val servingData : ArrayList<Serving> = arrayListOf(
         Serving("3","Udang Sambal Pete",20000F, R.drawable.udang_sambel_pete),
         Serving("1","Ikan Gurame Sambla Pete",40000F, R.drawable.ikan_gurame_sambal_pete),
@@ -30,26 +29,26 @@ class Testing3Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bind = ActivityTesting2Binding.inflate(layoutInflater)
+        bind = ActivityTesting3Binding.inflate(layoutInflater)
         setContentView(bind.root)
 
-        setSupportActionBar(bind.testing2Toolbar)
+        setSupportActionBar(bind.testing3Toolbar)
 
-        bind.testing2AppBar.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
+        bind.testing3AppBar.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
             Log.d("Testing", verticalOffset.toString())
             if (verticalOffset <= -600) {
-                bind.testingCollapsingToolbar.title = "Pondok Makan"
+                bind.testing3CollapsingToolbar.title = "Pondok Makan"
 //                bind.testingCollapsingToolbar.contentScrim = getDrawable(R.color.black)
             }
             else{
-                bind.testingCollapsingToolbar.title = ""
+                bind.testing3CollapsingToolbar.title = ""
 //                bind.testingCollapsingToolbar.contentScrim = getDrawable(R.color.blue_500)
             }
 
         })
 
-        bind.testing2RvServing.adapter = EateryAdapter(servingData)
-        bind.testing2RvServing.layoutManager = GridLayoutManager(this, 2)
+//        bind.testing2RvServing.adapter = EateryAdapter(servingData)
+//        bind.testing2RvServing.layoutManager = GridLayoutManager(this, 2)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

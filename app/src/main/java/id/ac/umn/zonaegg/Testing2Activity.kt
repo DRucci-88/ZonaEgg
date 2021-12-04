@@ -3,14 +3,12 @@ package id.ac.umn.zonaegg
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.ContextMenu
 import android.view.Menu
-import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.appbar.AppBarLayout
 import id.ac.umn.zonaegg.data.Serving
 import id.ac.umn.zonaegg.databinding.ActivityTesting2Binding
-import id.ac.umn.zonaegg.eatery_detail.EateryAdapter
+import id.ac.umn.zonaegg.eatery.EateryAdapter
 
 class Testing2Activity : AppCompatActivity() {
 
@@ -38,18 +36,18 @@ class Testing2Activity : AppCompatActivity() {
         bind.testing2AppBar.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
             Log.d("Testing", verticalOffset.toString())
             if (verticalOffset <= -600) {
-                bind.testingCollapsingToolbar.title = "Pondok Makan"
+                bind.testing2CollapsingToolbar.title = "Pondok Makan"
 //                bind.testingCollapsingToolbar.contentScrim = getDrawable(R.color.black)
             }
             else{
-                bind.testingCollapsingToolbar.title = ""
+                bind.testing2CollapsingToolbar.title = ""
 //                bind.testingCollapsingToolbar.contentScrim = getDrawable(R.color.blue_500)
             }
 
         })
 
-        bind.testing2RvServing.adapter = EateryAdapter(servingData)
-        bind.testing2RvServing.layoutManager = GridLayoutManager(this, 2)
+        bind.testing2Serving.adapter = EateryAdapter(servingData)
+        bind.testing2Serving.layoutManager = GridLayoutManager(this, 2)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

@@ -4,12 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
-import androidx.core.view.marginTop
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.appbar.AppBarLayout
 import id.ac.umn.zonaegg.data.Serving
 import id.ac.umn.zonaegg.databinding.ActivityTesting1Binding
-import id.ac.umn.zonaegg.eatery_detail.EateryAdapter
+import id.ac.umn.zonaegg.eatery.EateryAdapter
 
 class Testing1Activity : AppCompatActivity() {
 
@@ -28,7 +27,7 @@ class Testing1Activity : AppCompatActivity() {
 
         setSupportActionBar(bind.testingToolbar)
 
-        bind.testingAppBar.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
+        bind.testingAppBar.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { _, verticalOffset ->
             Log.d("Testing", verticalOffset.toString())
             Log.d("Testing", bind.testingCollapsingToolbar.scrimVisibleHeightTrigger.toString())
             if (verticalOffset <= -600) {
@@ -39,8 +38,8 @@ class Testing1Activity : AppCompatActivity() {
                 bind.testingCollapsingToolbar.title = ""
         })
 
-        bind.testingRvServing.adapter = EateryAdapter(servingData)
-        bind.testingRvServing.layoutManager = GridLayoutManager(this, 2)
+        bind.testingServing.adapter = EateryAdapter(servingData)
+        bind.testingServing.layoutManager = GridLayoutManager(this, 2)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

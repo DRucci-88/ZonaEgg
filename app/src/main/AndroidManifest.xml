@@ -19,7 +19,7 @@
             android:name=".Testing1Activity"
             android:exported="false" />
         <activity
-            android:name=".eatery_detail.EateryActivity"
+            android:name=".eatery.EateryActivity"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
