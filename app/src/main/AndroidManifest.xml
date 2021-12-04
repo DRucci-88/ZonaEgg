@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ZonaEgg">
         <activity
-            android:name=".EateryActivity"
+            android:name=".Testing2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Testing1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".eatery_detail.EateryActivity"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"

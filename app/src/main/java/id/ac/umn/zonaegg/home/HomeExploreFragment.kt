@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import id.ac.umn.zonaegg.EateryActivity
+import id.ac.umn.zonaegg.eatery_detail.EateryActivity
 import id.ac.umn.zonaegg.R
 import id.ac.umn.zonaegg.data.Eatery
 import id.ac.umn.zonaegg.databinding.FragmentHomeExploreBinding
@@ -69,8 +69,6 @@ class HomeExploreFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         bind = FragmentHomeExploreBinding.inflate(inflater, container, false)
-
-
 
         val navAdapter = HomeExploreNavAdapter(eateryCategory, exploreListener)
         bind.rvExploreNav.adapter = navAdapter

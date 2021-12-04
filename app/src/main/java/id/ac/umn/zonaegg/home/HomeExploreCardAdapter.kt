@@ -1,14 +1,11 @@
 package id.ac.umn.zonaegg.home
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.RecyclerView
-import id.ac.umn.zonaegg.EateryActivity
 import id.ac.umn.zonaegg.R
 import id.ac.umn.zonaegg.data.Eatery
 

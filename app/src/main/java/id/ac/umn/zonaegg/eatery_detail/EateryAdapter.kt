@@ -1,9 +1,10 @@
-package id.ac.umn.zonaegg
+package id.ac.umn.zonaegg.eatery_detail
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import id.ac.umn.zonaegg.R
 import id.ac.umn.zonaegg.data.Serving
 import id.ac.umn.zonaegg.databinding.ItemEateryFoodBinding
 
@@ -17,12 +18,12 @@ class EateryAdapter(
         val photoEatery = bind.homeIvEateryPhoto
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EateryAdapter.MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_eatery_food, parent, false)
         return MyViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: EateryAdapter.MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.nameEatery.text = list[position].name
         holder.priceEatery.text = "Rp. ${list[position].price}"
         holder.photoEatery.setImageResource(list[position].photoUrl)

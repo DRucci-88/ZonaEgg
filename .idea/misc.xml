@@ -15,6 +15,8 @@
         <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/activity_register.xml" value="0.3625" />
         <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/activity_settings.xml" value="0.3625" />
         <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/activity_splash.xml" value="0.24635416666666668" />
+        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/activity_testing.xml" value="0.264" />
+        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/activity_testing2.xml" value="0.3625" />
         <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/fragment_home_explore.xml" value="0.3625" />
         <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/fragment_home_popular_slider.xml" value="0.4" />
         <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/fragment_splash.xml" value="0.4" />
@@ -22,9 +24,13 @@
         <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/fragment_started1.xml" value="0.3625" />
         <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/fragment_started2.xml" value="0.3625" />
         <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/fragment_started_view_pager.xml" value="0.264" />
+        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/image_prominent_test.xml" value="0.3625" />
         <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/item_eatery_food.xml" value="0.3625" />
         <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/item_home_explore_card.xml" value="0.3625" />
         <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/item_home_explore_nav.xml" value="0.3625" />
+        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/layout/switch_item.xml" value="0.3625" />
+        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/menu/main_image_prominent.xml" value="0.3625" />
+        <entry key="..\:/A_Android_Sukses/ZonaEgg/app/src/main/res/menu/testing_image_prominent.xml" value="0.3625" />
       </map>
     </option>
   </component>

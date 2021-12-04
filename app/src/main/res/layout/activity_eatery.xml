@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EateryActivity">
+    tools:context=".eatery_detail.EateryActivity">
 
     <View
         android:id="@+id/view"
@@ -32,7 +32,7 @@
         style="@style/favoriteButton"/>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/testng_card_view"
         android:layout_width="match_parent"
         android:layout_height="140dp"
         android:layout_marginHorizontal="30dp"
@@ -125,6 +125,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        app:layout_constraintTop_toBottomOf="@+id/testng_card_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,51 @@
+package id.ac.umn.zonaegg
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.util.Log
+import android.view.Menu
+import androidx.core.view.marginTop
+import androidx.recyclerview.widget.GridLayoutManager
+import com.google.android.material.appbar.AppBarLayout
+import id.ac.umn.zonaegg.data.Serving
+import id.ac.umn.zonaegg.databinding.ActivityTestingBinding
+import id.ac.umn.zonaegg.eatery_detail.EateryAdapter
+
+class Testing1Activity : AppCompatActivity() {
+
+    private lateinit var bind: ActivityTestingBinding
+
+    private val servingData : ArrayList<Serving> = arrayListOf(
+//        Serving("1","Ikan Gurame Sambla Pete",40000F, R.drawable.ikan_gurame_sambal_pete),
+//        Serving("2","Nasi Ayam sambal pete",35000F, R.drawable.nasi_ayam_sambel_pete),
+//        Serving("3","Udang Sambal Pete",20000F, R.drawable.udang_sambel_pete)
+    )
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        bind = ActivityTestingBinding.inflate(layoutInflater)
+        setContentView(bind.root)
+
+        setSupportActionBar(bind.testingToolbar)
+
+        bind.testingAppBar.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
+            Log.d("Testing", verticalOffset.toString())
+            Log.d("Testing", bind.testingCollapsingToolbar.scrimVisibleHeightTrigger.toString())
+            if (verticalOffset <= -600) {
+                bind.testingCollapsingToolbar.title = "Pondok Makan"
+                bind.testingRvServing
+            }
+            else
+                bind.testingCollapsingToolbar.title = ""
+        })
+
+        bind.testingRvServing.adapter = EateryAdapter(servingData)
+        bind.testingRvServing.layoutManager = GridLayoutManager(this, 2)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.testing_image_prominent, menu)
+        return super.onCreateOptionsMenu(menu)
+
+    }
+}
