@@ -1,6 +1,5 @@
 package id.ac.umn.zonaegg.eatery
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -22,7 +21,8 @@ class EateryActivity : AppCompatActivity() {
         bind = ActivityEateryBinding.inflate(layoutInflater)
         setContentView(bind.root)
 
-        setSupportActionBar(bind.toolbarEatery)
+//        setSupportActionBar(findViewById(R.id.toolbar))
+        setSupportActionBar(findViewById(R.id.toolbar_eatery))
 
         val data: Eatery? = intent.getParcelableExtra<Eatery>("data")
 

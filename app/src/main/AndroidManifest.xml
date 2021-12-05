@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ZonaEgg">
         <activity
+            android:name=".Testing4Activity"
+            android:exported="false" />
+        <activity
             android:name=".Testing3Activity"
             android:exported="false" />
         <activity

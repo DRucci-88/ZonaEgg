@@ -7,6 +7,19 @@
     android:orientation="vertical"
     tools:context=".HomeActivity">
 
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        >-->
+
+<!--        <com.google.android.material.appbar.MaterialToolbar-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+
+<!--            />-->
+
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_popular"
         android:name="id.ac.umn.zonaegg.home.HomePopularSliderFragment"
@@ -18,6 +31,5 @@
         android:name="id.ac.umn.zonaegg.home.HomeExploreFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
 
 </LinearLayout>
