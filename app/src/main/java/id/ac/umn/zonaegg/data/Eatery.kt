@@ -8,16 +8,16 @@ data class Eatery(
     var name: String?,
     var category: String?,
     var rating: String?,
-    var distance: Float,
-    var photoUrl: Int
+    var distance: Double?,
+    var photoBackground: String?
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
-        parcel.readFloat(),
-        parcel.readInt()
+        parcel.readDouble(),
+        parcel.readString()
     ) {
     }
 
@@ -26,8 +26,8 @@ data class Eatery(
         parcel.writeString(name)
         parcel.writeString(category)
         parcel.writeString(rating)
-        parcel.writeFloat(distance)
-        parcel.writeInt(photoUrl)
+        distance?.let { parcel.writeDouble(it) }
+        parcel.writeString(photoBackground)
     }
 
     override fun describeContents(): Int {

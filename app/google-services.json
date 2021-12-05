@@ -60,6 +60,14 @@
           }
         },
         {
+          "client_id": "619114856130-9lgb2q27nhkc5hh5lmrhddsjg23hai20.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.ac.umn.zonaegg",
+            "certificate_hash": "96c2458cfcf3caac445a1ae758fb7d5e1458babc"
+          }
+        },
+        {
           "client_id": "619114856130-uhkud4s1628nfucpju6aa0m1akns2bc8.apps.googleusercontent.com",
           "client_type": 3
         }

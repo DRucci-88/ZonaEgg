@@ -1,11 +1,14 @@
 package id.ac.umn.zonaegg.eatery
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import androidx.fragment.app.Fragment
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.squareup.picasso.Picasso
+import id.ac.umn.zonaegg.HomeActivity
 import id.ac.umn.zonaegg.R
 import id.ac.umn.zonaegg.data.Eatery
 import id.ac.umn.zonaegg.databinding.ActivityEateryBinding
@@ -21,10 +24,16 @@ class EateryActivity : AppCompatActivity() {
         bind = ActivityEateryBinding.inflate(layoutInflater)
         setContentView(bind.root)
 
-//        setSupportActionBar(findViewById(R.id.toolbar))
-        setSupportActionBar(findViewById(R.id.toolbar_eatery))
+//        setSupportActionBar(findViewById(R.id.toolbar_eatery))
+        setSupportActionBar(bind.toolbarEatery)
 
         val data: Eatery? = intent.getParcelableExtra<Eatery>("data")
+        data?.let {
+//            bind.ivBackgroundEatery.setBackgroundResource(it.photoBackground)
+            Picasso.get().load(it.photoBackground).into(bind.ivBackgroundEatery)
+            bind.tvCategoryEatery.text = it.category
+            bind.tvNameEatery.text = it.name
+        }
 
         bind.appBarEatery.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
             if (verticalOffset <= -600) {
@@ -37,11 +46,10 @@ class EateryActivity : AppCompatActivity() {
             }
         })
 
-        data?.photoUrl?.let { bind.ivBackgroundEatery.setBackgroundResource(it) }
-        data?.let {
-            bind.ivBackgroundEatery.setBackgroundResource(it.photoUrl)
-            bind.tvCategoryEatery.text = it.category
-            bind.tvNameEatery.text = it.name
+        bind.toolbarEatery.setNavigationOnClickListener {
+            val goBackHome = Intent(this, HomeActivity::class.java)
+            goBackHome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(goBackHome)
         }
 
         val fragmentList: ArrayList<Fragment> = arrayListOf(EateryMenuFragment(), EateryReviewFragment())
@@ -55,7 +63,8 @@ class EateryActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.testing_image_prominent, menu)
+        menuInflater.inflate(R.menu.top_bar_eatery, menu)
         return super.onCreateOptionsMenu(menu)
     }
+
 }

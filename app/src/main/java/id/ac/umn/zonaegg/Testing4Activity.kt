@@ -1,41 +1,90 @@
 package id.ac.umn.zonaegg
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.firestore.EventListener
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.FirebaseFirestoreException
-import com.google.firebase.firestore.QuerySnapshot
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import id.ac.umn.zonaegg.data.Eatery
+import id.ac.umn.zonaegg.databinding.ActivityTesting4Binding
+import id.ac.umn.zonaegg.home.HomeExploreCardAdapter
+import id.ac.umn.zonaegg.home.HomeExploreListener
+
 
 class Testing4Activity : AppCompatActivity() {
 
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var userArrayList: RecyclerView
-    private lateinit var db: FirebaseFirestore
+    private lateinit var bind: ActivityTesting4Binding
+    private lateinit var list: ArrayList<Eatery>
+    val db = Firebase.firestore
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_testing4)
+        bind = ActivityTesting4Binding.inflate(layoutInflater)
+        setContentView(bind.root)
+
+        list = ArrayList<Eatery>()
+        var temp: Eatery
+
+        db.collection("Kantin UMN")
+            .get()
+            .addOnSuccessListener { result ->
+                Log.d("testing4", "SUCCESS")
+                for (document in result) {
+                    Log.d("testing4", "${document.id} => ${document.data["name"]}")
+                    temp = Eatery(document.id,
+                        document.getString("name"),
+                        "Kantin UMN",
+                        document.getString("rating"),
+                        document.getDouble("distance"),
+                        document.getString("photoBackground"))
+                    list.add(temp)
+                    Log.d("testing4", temp.name!!)
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.d("testing4", "Error getting documents: ", exception)
+            }
+//        Log.d("testing4", list[0].name.toString())
+        val testingListener = object : HomeExploreListener {
+            override fun onChangeNav(category: String) {
+
+            }
+
+            override fun goToDetailEatery(data: Eatery) {
+
+            }
+
+        }
+
+        list.map {
+            Log.d("testing4", "-- ${it.name}")
+        }
+
+        bind.testingRv.adapter = HomeExploreCardAdapter(list, testingListener)
+        bind.testingRv.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+    }
+
+    override fun onStart() {
+        super.onStart()
 
     }
 
-    private fun EventChangeListener(){
-
-        db= FirebaseFirestore.getInstance()
-        db.collection("").
-                addSnapshotListener(object : EventListener<QuerySnapshot>{
-                    override fun onEvent(
-                        value: QuerySnapshot?,
-                        error: FirebaseFirestoreException?
-                    ){
-
-
-
-                    }
-                })
-    }
+//    private fun EventChangeListener(){
+//
+//        db= FirebaseFirestore.getInstance()
+//        db.collection("").
+//                addSnapshotListener(object : EventListener<QuerySnapshot>{
+//                    override fun onEvent(
+//                        value: QuerySnapshot?,
+//                        error: FirebaseFirestoreException?
+//                    ){
+//
+//
+//
+//                    }
+//                })
+//    }
 }

@@ -2,6 +2,7 @@ package id.ac.umn.zonaegg
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import id.ac.umn.zonaegg.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
@@ -12,6 +13,20 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bind = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(bind.root)
+
+        bind.toolbarHome.setOnMenuItemClickListener {
+            when(it.itemId){
+                R.id.top_bar_home_credits -> {
+                    true
+                }
+                R.id.top_bar_home_profile -> {
+                    true
+                }
+                else -> false
+            }
+        }
+
+
     }
 }
 

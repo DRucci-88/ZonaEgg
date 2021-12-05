@@ -21,9 +21,9 @@ class HomePopularSliderFragment : Fragment() {
     private lateinit var bind: FragmentHomePopularSliderBinding
     private var sliderHandler = Handler(Looper.getMainLooper())
     private val popularList: ArrayList<Eatery> = arrayListOf(
-        Eatery("1", "Jujutsu", "Anime","5", 4.5F, R.drawable.sangkyuu_somuch_besto_frendo),
-        Eatery("2", "Animal", "Anime","4.5", 4.5F, R.drawable.pepatah_kakek_kura_kura),
-        Eatery("3", "Kaiser", "Anime","3.7", 4.5F, R.drawable.swaq_face)
+//        Eatery("1", "Jujutsu", "Anime","5", 4.5F, R.drawable.sangkyuu_somuch_besto_frendo),
+//        Eatery("2", "Animal", "Anime","4.5", 4.5F, R.drawable.pepatah_kakek_kura_kura),
+//        Eatery("3", "Kaiser", "Anime","3.7", 4.5F, R.drawable.swaq_face)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

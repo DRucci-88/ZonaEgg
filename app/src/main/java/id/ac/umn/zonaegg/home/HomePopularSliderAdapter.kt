@@ -1,11 +1,11 @@
 package id.ac.umn.zonaegg.home
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.squareup.picasso.Picasso
 import id.ac.umn.zonaegg.R
 import id.ac.umn.zonaegg.data.Eatery
 import id.ac.umn.zonaegg.databinding.HomePopularSliderItemBinding
@@ -52,7 +52,8 @@ class HomePopularSliderAdapter(
         holder.namePopular.text = listPopular[position].name
         holder.ratingPopular.text = listPopular[position].rating
         holder.distancePopular.text = listPopular[position].distance.toString()
-        holder.imagePopular.setImageResource(listPopular[position].photoUrl)
+//        holder.imagePopular.setImageResource(listPopular[position].photoBackground)
+        Picasso.get().load(listPopular[position].photoBackground).into(holder.imagePopular)
 //        Log.d("heroism","Position : ${position.toString()}, Size: ${listPopular.size}")
         if(listPopular.size == rawListPopular.size * 6)
             viewPager.post(runnableReset)
