@@ -17,7 +17,7 @@ import id.ac.umn.zonaegg.home.HomeExploreListener
 class Testing4Activity : AppCompatActivity() {
 
     private lateinit var bind: ActivityTesting4Binding
-    private lateinit var list: ArrayList<Eatery>
+//    private lateinit var list: ArrayList<Eatery>
     val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +25,7 @@ class Testing4Activity : AppCompatActivity() {
         bind = ActivityTesting4Binding.inflate(layoutInflater)
         setContentView(bind.root)
 
-        list = ArrayList<Eatery>()
+        var list = ArrayList<Eatery>()
         var temp: Eatery
 
         db.collection("Kantin UMN")
@@ -33,36 +33,33 @@ class Testing4Activity : AppCompatActivity() {
             .addOnSuccessListener { result ->
                 Log.d("testing4", "SUCCESS")
                 for (document in result) {
-                    Log.d("testing4", "${document.id} => ${document.data["name"]}")
-                    temp = Eatery(document.id,
+                    Log.d("testing4", "Data Raw ${document.id} => ${document.data["name"]}")
+//                    Log.d("testing4", "Data Name : ${document.getString("name")}")
+
+                    val temp = Eatery(document.id,
                         document.getString("name"),
                         "Kantin UMN",
                         document.getString("rating"),
                         document.getDouble("distance"),
                         document.getString("photoBackground"))
                     list.add(temp)
-                    Log.d("testing4", temp.name!!)
+                    Log.d("testing4", "Ler : ${temp.name!!}")
+                    Log.d("testing4", "List : ${list.last().name}")
                 }
             }
             .addOnFailureListener { exception ->
                 Log.d("testing4", "Error getting documents: ", exception)
             }
+
+        Log.d("testing4", "FINAL : ${list.last().name!!}")
 //        Log.d("testing4", list[0].name.toString())
+
         val testingListener = object : HomeExploreListener {
             override fun onChangeNav(category: String) {
-
             }
-
             override fun goToDetailEatery(data: Eatery) {
-
             }
-
         }
-
-        list.map {
-            Log.d("testing4", "-- ${it.name}")
-        }
-
         bind.testingRv.adapter = HomeExploreCardAdapter(list, testingListener)
         bind.testingRv.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
     }

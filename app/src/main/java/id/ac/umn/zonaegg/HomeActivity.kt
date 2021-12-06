@@ -16,10 +16,10 @@ class HomeActivity : AppCompatActivity() {
 
         bind.toolbarHome.setOnMenuItemClickListener {
             when(it.itemId){
-                R.id.top_bar_home_credits -> {
+                R.id.top_bar_home_search -> {
                     true
                 }
-                R.id.top_bar_home_profile -> {
+                R.id.top_bar_home_settings -> {
                     true
                 }
                 else -> false
