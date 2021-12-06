@@ -14,6 +14,9 @@ import id.ac.umn.zonaegg.data.Serving
 import id.ac.umn.zonaegg.databinding.ActivityTesting4Binding
 import id.ac.umn.zonaegg.home.HomeExploreCardAdapter
 import id.ac.umn.zonaegg.home.HomeExploreListener
+import java.util.*
+import kotlin.collections.ArrayList
+import kotlin.collections.HashMap
 
 
 class Testing4Activity : AppCompatActivity() {
@@ -34,14 +37,17 @@ class Testing4Activity : AppCompatActivity() {
             .get()
             .addOnSuccessListener { eateries ->
                 for (eatery in eateries) {
-                    var temps = eatery.data["zmenu"].toString()
-                    val array = temps.split(",")
-                        .map { it.split("=") }
-                        .map { it.first() to it.last().toString() }
-                        .toMap()
-                    for (a in array) {
-                        Log.d("testing4", "${a.key} => ${a.value}")
+                    var menus: List<Map<String, Objects>> = eatery.data["zmenu"] as List<Map<String, Objects>>
+                    for (menu in menus) {
+                        val menuData = menu.toString().replace("{", "").replace("}", "")
+                        val serving = hashMapOf(
+                            "name" to menuData.substringAfterLast("name="),
+                            "price" to menuData.substringAfterLast("price=").substringBefore(","),
+                            "photoUrl" to menuData.substringAfterLast("photoUrl=").substringBefore(",")
+                        )
+                        Log.d("testing4spec", "$serving")
                     }
+
                 }
             }
             .addOnFailureListener { exception ->
