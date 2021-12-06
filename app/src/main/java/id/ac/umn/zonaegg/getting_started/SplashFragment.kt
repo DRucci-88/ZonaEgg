@@ -32,8 +32,8 @@ class SplashFragment : Fragment() {
 //                val intent = Intent(requireContext(), HomeActivity::class.java)
 //                val intent = Intent(requireContext(), Testing1Activity::class.java)
 //                val intent = Intent(requireContext(), Testing2Activity::class.java)
-                val intent = Intent(requireContext(), Testing4Activity::class.java)
-//                val intent = Intent(requireContext(), Testing5Activity::class.java)
+//                val intent = Intent(requireContext(), Testing4Activity::class.java)
+                val intent = Intent(requireContext(), Testing5Activity::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
                 requireActivity().startActivity(intent)
             }

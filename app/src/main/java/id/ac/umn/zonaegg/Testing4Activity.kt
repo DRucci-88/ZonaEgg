@@ -47,7 +47,6 @@ class Testing4Activity : AppCompatActivity() {
                         )
                         Log.d("testing4spec", "$serving")
                     }
-
                 }
             }
             .addOnFailureListener { exception ->
