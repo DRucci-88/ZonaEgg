@@ -3,20 +3,16 @@ package id.ac.umn.zonaegg
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import id.ac.umn.zonaegg.data.Eatery
-import id.ac.umn.zonaegg.data.Serving
+import id.ac.umn.zonaegg.data.EateryFireStore
 import id.ac.umn.zonaegg.databinding.ActivityTesting4Binding
 import id.ac.umn.zonaegg.home.HomeExploreCardAdapter
 import id.ac.umn.zonaegg.home.HomeExploreListener
 import java.util.*
 import kotlin.collections.ArrayList
-import kotlin.collections.HashMap
 
 
 class Testing4Activity : AppCompatActivity() {
@@ -30,7 +26,7 @@ class Testing4Activity : AppCompatActivity() {
         bind = ActivityTesting4Binding.inflate(layoutInflater)
         setContentView(bind.root)
 
-        var list = ArrayList<Eatery>()
+        var list = ArrayList<EateryFireStore>()
         var temp: Eatery
 
         db.collection("Kantin UMN")
@@ -47,6 +43,7 @@ class Testing4Activity : AppCompatActivity() {
                         )
                         Log.d("testing4spec", "$serving")
                     }
+
                 }
             }
             .addOnFailureListener { exception ->
@@ -59,7 +56,7 @@ class Testing4Activity : AppCompatActivity() {
         val testingListener = object : HomeExploreListener {
             override fun onChangeNav(category: String) {
             }
-            override fun goToDetailEatery(data: Eatery) {
+            override fun goToDetailEatery(data: EateryFireStore) {
             }
         }
 

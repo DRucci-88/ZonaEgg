@@ -9,8 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import id.ac.umn.zonaegg.eatery.EateryActivity
-import id.ac.umn.zonaegg.R
-import id.ac.umn.zonaegg.data.Eatery
+import id.ac.umn.zonaegg.data.EateryFireStore
 import id.ac.umn.zonaegg.databinding.FragmentHomeExploreBinding
 import java.util.*
 import kotlin.collections.ArrayList
@@ -19,11 +18,11 @@ class HomeExploreFragment : Fragment() {
 
     private lateinit var bind: FragmentHomeExploreBinding
     private val eateryCategory = arrayOf("All","Canteen","Restaurant","Warteg")
-    private val eateryDataRaw : ArrayList<Eatery> = arrayListOf(
-        Eatery("Pondok", "Pondok", "Canteen",4.8, 4.5, "https://firebasestorage.googleapis.com/v0/b/testing-firebase-50139.appspot.com/o/Kantin%20UMN%2FLIBRO%20UMN%2FEspresso.jpg?alt=media&token=b0b5447a-ab48-4036-8552-2c9c552152e7", ),
-        Eatery("Pondok Lagi", "Pondok Lagi", "Warteg", 4.5, 4.8, "https://firebasestorage.googleapis.com/v0/b/testing-firebase-50139.appspot.com/o/Kantin%20UMN%2FLIBRO%20UMN%2FEspresso.jpg?alt=media&token=b0b5447a-ab48-4036-8552-2c9c552152e7"),
-        Eatery("Restototo", "Restototo", "Restaurant", 4.9, 4.1, "https://firebasestorage.googleapis.com/v0/b/testing-firebase-50139.appspot.com/o/Kantin%20UMN%2FLIBRO%20UMN%2FEspresso.jpg?alt=media&token=b0b5447a-ab48-4036-8552-2c9c552152e7"),
-        Eatery("Lazada", "Lazada", "Canteen", 5.0, 4.8, "https://firebasestorage.googleapis.com/v0/b/testing-firebase-50139.appspot.com/o/Kantin%20UMN%2FLIBRO%20UMN%2FEspresso.jpg?alt=media&token=b0b5447a-ab48-4036-8552-2c9c552152e7")
+    private val eateryDataRaw : ArrayList<EateryFireStore> = arrayListOf(
+        EateryFireStore("Pondok", "Canteen",4.8, 4.5, "https://firebasestorage.googleapis.com/v0/b/testing-firebase-50139.appspot.com/o/Kantin%20UMN%2FLIBRO%20UMN%2FEspresso.jpg?alt=media&token=b0b5447a-ab48-4036-8552-2c9c552152e7", ),
+        EateryFireStore("Pondok Lagi", "Warteg", 4.5, 4.8, "https://firebasestorage.googleapis.com/v0/b/testing-firebase-50139.appspot.com/o/Kantin%20UMN%2FLIBRO%20UMN%2FEspresso.jpg?alt=media&token=b0b5447a-ab48-4036-8552-2c9c552152e7"),
+        EateryFireStore("Restototo", "Restaurant", 4.9, 4.1, "https://firebasestorage.googleapis.com/v0/b/testing-firebase-50139.appspot.com/o/Kantin%20UMN%2FLIBRO%20UMN%2FEspresso.jpg?alt=media&token=b0b5447a-ab48-4036-8552-2c9c552152e7"),
+        EateryFireStore("Lazada", "Canteen", 5.0, 4.8, "https://firebasestorage.googleapis.com/v0/b/testing-firebase-50139.appspot.com/o/Kantin%20UMN%2FLIBRO%20UMN%2FEspresso.jpg?alt=media&token=b0b5447a-ab48-4036-8552-2c9c552152e7")
     )
 
     private val exploreListener = object : HomeExploreListener {
@@ -36,7 +35,7 @@ class HomeExploreFragment : Fragment() {
                 "warteg" -> bind.rvExploreCard.swapAdapter(cardWartegAdapter, false)
             }
         }
-        override fun goToDetailEatery(data: Eatery) {
+        override fun goToDetailEatery(data: EateryFireStore) {
             val intent = Intent(requireContext(), EateryActivity::class.java)
             intent.putExtra("data", data)
             requireActivity().startActivity(intent)
@@ -46,17 +45,17 @@ class HomeExploreFragment : Fragment() {
     private val cardCanteenAdapter: HomeExploreCardAdapter by lazy {
         HomeExploreCardAdapter(eateryDataRaw.filter {
             it.category?.lowercase(Locale.getDefault()) ?: "" == "canteen"
-        } as ArrayList<Eatery>, exploreListener)
+        } as ArrayList<EateryFireStore>, exploreListener)
     }
     private val cardRestaurantAdapter: HomeExploreCardAdapter by lazy {
         HomeExploreCardAdapter(eateryDataRaw.filter {
             it.category?.lowercase(Locale.getDefault()) ?: "" == "restaurant"
-        } as ArrayList<Eatery>, exploreListener)
+        } as ArrayList<EateryFireStore>, exploreListener)
     }
     private val cardWartegAdapter: HomeExploreCardAdapter by lazy {
         HomeExploreCardAdapter(eateryDataRaw.filter {
             it.category?.lowercase(Locale.getDefault()) ?: "" == "warteg"
-        } as ArrayList<Eatery>, exploreListener)
+        } as ArrayList<EateryFireStore>, exploreListener)
     }
 
 
@@ -79,5 +78,9 @@ class HomeExploreFragment : Fragment() {
 
         return bind.root
     }
+}
+
+private fun Intent.putExtra(s: String, data: EateryFireStore) {
+
 }
 

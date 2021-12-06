@@ -1,8 +1,8 @@
 package id.ac.umn.zonaegg.home
 
-import id.ac.umn.zonaegg.data.Eatery
+import id.ac.umn.zonaegg.data.EateryFireStore
 
 interface HomeExploreListener {
     fun onChangeNav(category: String)
-    fun goToDetailEatery(data: Eatery)
+    fun goToDetailEatery(data: EateryFireStore)
 }
