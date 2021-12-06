@@ -57,6 +57,7 @@
     <string name="str_started_welcome">Welcome to ZonaEgg</string>
 
     <!-- Home -->
+    <string name="search">Search</string>
     <string name="eatery_photo">Eatery Photo</string>
     <string name="eatery_name">Eatery Photo</string>
     <string name="eatery_category">Eatery Category</string>

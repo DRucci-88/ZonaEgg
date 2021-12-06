@@ -2,12 +2,14 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+
     <item
-        android:id="@+id/tob_bar_eatery_favorite"
-        android:title="Favorite"
+        android:id="@+id/top_bar_home_favorites"
+        android:title="@string/add_to_favorites"
+        android:icon="@drawable/ic_favorite"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/tob_bar_eatery_credits"
-        android:title="Credits"
+        android:title="@string/app_name"
+        android:actionLayout="@layout/padding_4dp"
         app:showAsAction="ifRoom" />
 </menu>
