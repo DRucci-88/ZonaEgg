@@ -7,14 +7,14 @@ import id.ac.umn.zonaegg.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
 
-    private lateinit var bind: ActivityHomeBinding
+    private lateinit var binding: ActivityHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bind = ActivityHomeBinding.inflate(layoutInflater)
-        setContentView(bind.root)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         Log.d("home", "On Create")
-        bind.toolbarHome.setOnMenuItemClickListener {
+        binding.toolbarHome.setOnMenuItemClickListener {
             when(it.itemId){
                 R.id.top_bar_home_search -> {
                     true
