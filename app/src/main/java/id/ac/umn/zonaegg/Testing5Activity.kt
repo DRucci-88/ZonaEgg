@@ -38,7 +38,7 @@ class Testing5Activity : AppCompatActivity() {
                     temp = Eatery(eatery.id,
                         eatery.getString("name"),
                         eatery.getString("category"),
-                        eatery.getString("rating"),
+                        eatery.getDouble("rating"),
                         eatery.getDouble("distance"),
                         eatery.getString("photoBackground"))
                     list.add(temp)
@@ -81,7 +81,7 @@ class Testing5Activity : AppCompatActivity() {
                             temp = Eatery(document.id,
                                 document.getString("name"),
                                 document.getString("category"),
-                                document.getString("rating"),
+                                document.getDouble("rating"),
                                 document.getDouble("distance"),
                                 document.getString("photoBackground"))
                             list.add(temp)

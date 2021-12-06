@@ -20,10 +20,10 @@ class HomeExploreFragment : Fragment() {
     private lateinit var bind: FragmentHomeExploreBinding
     private val eateryCategory = arrayOf("All","Canteen","Restaurant","Warteg")
     private val eateryDataRaw : ArrayList<Eatery> = arrayListOf(
-//        Eatery("Pondok", "Pondok", "Canteen", "4.8", 5f, R.drawable.sangkyuu_somuch_besto_frendo),
-//        Eatery("Pondok Lagi", "Pondok Lagi", "Warteg", "4.3", 4.5f, R.drawable.pepatah_kakek_kura_kura),
-//        Eatery("Restototo", "Restototo", "Restaurant", "4.9", 4.1f, R.drawable.swaq_face),
-//        Eatery("Lazada", "Lazada", "Canteen", "4.0", 5f, R.drawable.swaq_face)
+        Eatery("Pondok", "Pondok", "Canteen",4.8, 4.5, "https://firebasestorage.googleapis.com/v0/b/testing-firebase-50139.appspot.com/o/Kantin%20UMN%2FLIBRO%20UMN%2FEspresso.jpg?alt=media&token=b0b5447a-ab48-4036-8552-2c9c552152e7", ),
+        Eatery("Pondok Lagi", "Pondok Lagi", "Warteg", 4.5, 4.8, "https://firebasestorage.googleapis.com/v0/b/testing-firebase-50139.appspot.com/o/Kantin%20UMN%2FLIBRO%20UMN%2FEspresso.jpg?alt=media&token=b0b5447a-ab48-4036-8552-2c9c552152e7"),
+        Eatery("Restototo", "Restototo", "Restaurant", 4.9, 4.1, "https://firebasestorage.googleapis.com/v0/b/testing-firebase-50139.appspot.com/o/Kantin%20UMN%2FLIBRO%20UMN%2FEspresso.jpg?alt=media&token=b0b5447a-ab48-4036-8552-2c9c552152e7"),
+        Eatery("Lazada", "Lazada", "Canteen", 5.0, 4.8, "https://firebasestorage.googleapis.com/v0/b/testing-firebase-50139.appspot.com/o/Kantin%20UMN%2FLIBRO%20UMN%2FEspresso.jpg?alt=media&token=b0b5447a-ab48-4036-8552-2c9c552152e7")
     )
 
     private val exploreListener = object : HomeExploreListener {

@@ -50,7 +50,7 @@ class HomePopularSliderAdapter(
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.namePopular.text = listPopular[position].name
-        holder.ratingPopular.text = listPopular[position].rating
+        holder.ratingPopular.text = listPopular[position].rating.toString()
         holder.distancePopular.text = listPopular[position].distance.toString()
 //        holder.imagePopular.setImageResource(listPopular[position].photoBackground)
         Picasso.get().load(listPopular[position].photoBackground).into(holder.imagePopular)

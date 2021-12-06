@@ -51,7 +51,7 @@ class HomeExploreCardAdapter (
         Picasso.get().load(dataSet[position].photoBackground).into(holder.imgEateryPhoto)
         holder.tvEateryName.text = dataSet[position].name
         holder.tvEateryCategory.text = dataSet[position].category
-        holder.tvEateryRating.text = dataSet[position].rating
+        holder.tvEateryRating.text = dataSet[position].rating.toString()
         holder.tvEateryDistance.text = dataSet[position].distance.toString()
     }
 

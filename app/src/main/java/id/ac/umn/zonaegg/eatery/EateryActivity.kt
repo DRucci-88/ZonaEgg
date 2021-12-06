@@ -47,9 +47,7 @@ class EateryActivity : AppCompatActivity() {
         })
 
         bind.toolbarEatery.setNavigationOnClickListener {
-            val goBackHome = Intent(this, HomeActivity::class.java)
-            goBackHome.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            startActivity(goBackHome)
+            finish()
         }
 
         val fragmentList: ArrayList<Fragment> = arrayListOf(EateryMenuFragment(), EateryReviewFragment())

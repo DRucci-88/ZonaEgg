@@ -7,15 +7,16 @@ data class Eatery(
     var id: String?,
     var name: String?,
     var category: String?,
-    var rating: String?,
+    var rating: Double?,
     var distance: Double?,
     var photoBackground: String?
 ) : Parcelable {
+
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
-        parcel.readString(),
+        parcel.readDouble(),
         parcel.readDouble(),
         parcel.readString()
     ) {
@@ -25,7 +26,7 @@ data class Eatery(
         parcel.writeString(id)
         parcel.writeString(name)
         parcel.writeString(category)
-        parcel.writeString(rating)
+        rating?.let { parcel.writeDouble(it) }
         distance?.let { parcel.writeDouble(it) }
         parcel.writeString(photoBackground)
     }

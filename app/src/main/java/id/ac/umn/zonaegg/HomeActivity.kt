@@ -13,7 +13,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bind = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(bind.root)
-
+        Log.d("home", "On Create")
         bind.toolbarHome.setOnMenuItemClickListener {
             when(it.itemId){
                 R.id.top_bar_home_search -> {
@@ -25,8 +25,31 @@ class HomeActivity : AppCompatActivity() {
                 else -> false
             }
         }
+    }
 
+    override fun onStart() {
+        super.onStart()
+        Log.d("home", "On Start")
+    }
 
+    override fun onPause() {
+        super.onPause()
+        Log.d("home", "On Pause")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("home", "On Resume")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("home", "On Stop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("home", "On Destroy")
     }
 }
 
