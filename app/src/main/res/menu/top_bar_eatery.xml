@@ -9,7 +9,7 @@
         android:icon="@drawable/ic_favorite"
         app:showAsAction="ifRoom" />
     <item
-        android:title="@string/app_name"
+        android:title=""
         android:actionLayout="@layout/padding_4dp"
         app:showAsAction="ifRoom" />
 </menu>
