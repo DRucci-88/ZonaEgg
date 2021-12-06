@@ -28,7 +28,7 @@ class Testing5Activity : AppCompatActivity() {
         var temp: Eatery
         var tempServing: Serving
         var i = 0
-
+/*
         // Get eateries
         db.collection("Kantin UMN")
             .get()
@@ -68,7 +68,7 @@ class Testing5Activity : AppCompatActivity() {
             }
             .addOnFailureListener { exception ->
                 Log.d("testing5", "Error getting eateries: ", exception)
-            }
+            } */
 //        Log.d("testing5", list[0].name.toString())
         val testingListener = object : HomeExploreListener {
             override fun onChangeNav(category: String) {

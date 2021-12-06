@@ -6,9 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import id.ac.umn.zonaegg.data.Eatery
+import id.ac.umn.zonaegg.data.Serving
 import id.ac.umn.zonaegg.databinding.ActivityTesting4Binding
 import id.ac.umn.zonaegg.home.HomeExploreCardAdapter
 import id.ac.umn.zonaegg.home.HomeExploreListener
@@ -30,22 +32,16 @@ class Testing4Activity : AppCompatActivity() {
 
         db.collection("Kantin UMN")
             .get()
-            .addOnSuccessListener { result ->
-                Log.d("testing4", "SUCCESS")
-                for (document in result) {
-                    Log.d("testing4", "Data Raw ${document.id} => ${document.data["zmenu"]}")
-//                    Log.d("testing4", "Data Raw ${document.id} => ${document.data.get}")
-//                    Log.d("testing4", "Data Name : ${document.getString("name")}")
-
-//                    val temp = Eatery(document.id,
-//                        document.getString("name"),
-//                        "Kantin UMN",
-//                        document.getDouble("rating"),
-//                        document.getDouble("distance"),
-//                        document.getString("photoBackground"))
-//                    list.add(temp)
-//                    Log.d("testing4", "Ler : ${temp.name!!}")
-//                    Log.d("testing4", "List : ${list.last().name}")
+            .addOnSuccessListener { eateries ->
+                for (eatery in eateries) {
+                    var temps = eatery.data["zmenu"].toString()
+                    val array = temps.split(",")
+                        .map { it.split("=") }
+                        .map { it.first() to it.last().toString() }
+                        .toMap()
+                    for (a in array) {
+                        Log.d("testing4", "${a.key} => ${a.value}")
+                    }
                 }
             }
             .addOnFailureListener { exception ->
@@ -61,6 +57,7 @@ class Testing4Activity : AppCompatActivity() {
             override fun goToDetailEatery(data: Eatery) {
             }
         }
+
         bind.testingRv.adapter = HomeExploreCardAdapter(list, testingListener)
         bind.testingRv.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
     }
