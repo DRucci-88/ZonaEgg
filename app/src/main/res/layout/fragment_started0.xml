@@ -15,7 +15,8 @@
         android:text="@string/str_getting_started"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/primaryButton"/>
 
     <TextView
         android:id="@+id/textView"

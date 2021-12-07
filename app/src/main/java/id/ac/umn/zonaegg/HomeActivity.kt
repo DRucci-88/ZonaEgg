@@ -1,8 +1,10 @@
 package id.ac.umn.zonaegg
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.core.content.ContentProviderCompat.requireContext
 import id.ac.umn.zonaegg.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
@@ -16,11 +18,10 @@ class HomeActivity : AppCompatActivity() {
         Log.d("home", "On Create")
         binding.toolbarHome.setOnMenuItemClickListener {
             when(it.itemId){
-                R.id.top_bar_home_search -> {
-                    true
-                }
                 R.id.top_bar_home_settings -> {
-                    true
+                    val intent = Intent(this, SettingsActivity::class.java)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                    requireActivity().startActivity(intent)
                 }
                 else -> false
             }

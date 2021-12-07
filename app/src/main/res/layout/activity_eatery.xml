@@ -88,7 +88,7 @@
                         android:layout_weight="1"
                         android:text="Warteg"
                         android:textAppearance="?attr/textAppearanceBody2"
-                        android:textColor="?android:attr/textColorSecondary"
+                        android:textColor="?colorOnSecondary"
                         tools:text="Warteg" />
 
                     <LinearLayout

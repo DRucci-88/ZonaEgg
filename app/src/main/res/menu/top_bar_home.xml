@@ -3,11 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/top_bar_home_search"
-        android:title="@string/search"
-        android:icon="@drawable/ic_search"
-        app:showAsAction="ifRoom" />
-    <item
         android:id="@+id/top_bar_home_settings"
         android:title="@string/settings"
         android:icon="@drawable/ic_settings"

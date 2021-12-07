@@ -21,9 +21,9 @@ class HomePopularSliderFragment : Fragment() {
     private lateinit var bind: FragmentHomePopularSliderBinding
     private var sliderHandler = Handler(Looper.getMainLooper())
     private val popularList: ArrayList<Eatery> = arrayListOf(
-//        Eatery("1", "Jujutsu", "Anime","5", 4.5F, R.drawable.sangkyuu_somuch_besto_frendo),
-//        Eatery("2", "Animal", "Anime","4.5", 4.5F, R.drawable.pepatah_kakek_kura_kura),
-//        Eatery("3", "Kaiser", "Anime","3.7", 4.5F, R.drawable.swaq_face)
+        Eatery("Pondok Makan", "Pondok Makan", "Warteg", 4.9, 2.8, "https://firebasestorage.googleapis.com/v0/b/zonaegg-8bf3b.appspot.com/o/Warteg%2FPondok%20Makan%2FS__4448275.jpg?alt=media&token=1685d49d-f757-4f70-9536-e966bcc746d8"),
+        Eatery("Nyapii!", "Nyapii!", "Restaurant", 5.0, 4.8, "https://firebasestorage.googleapis.com/v0/b/zonaegg-8bf3b.appspot.com/o/Restoran%2FNyapii!%2F120271355_104652764739956_2039778306485302658_n.jpg?alt=media&token=e0f2b9d0-1bef-47cb-803a-de893b059990"),
+        Eatery("Lamian Palace", "Lamian Palace", "Restaurant", 4.9, 4.1, "https://firebasestorage.googleapis.com/v0/b/zonaegg-8bf3b.appspot.com/o/Restoran%2FLamian%20Palace%2FBakpao%20Naga%20Durian%20Cropped.jpg?alt=media&token=60fbadb2-4aa7-45d1-9574-a640eb31eb34")
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

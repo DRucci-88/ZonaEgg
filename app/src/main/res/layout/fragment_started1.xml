@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="128dp"
-        android:text="Fragment 1"
+        android:text="ZonaEgg menyediakan daftar tempat makan di sekitar UMN."
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -37,6 +37,7 @@
         android:layout_marginBottom="72dp"
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/primaryButton"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
