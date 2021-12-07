@@ -8,18 +8,19 @@ import androidx.viewpager2.widget.ViewPager2
 import com.squareup.picasso.Picasso
 import id.ac.umn.zonaegg.R
 import id.ac.umn.zonaegg.data.Eatery
+import id.ac.umn.zonaegg.data.EaterySlider
 import id.ac.umn.zonaegg.databinding.HomePopularSliderItemBinding
 
 class HomePopularSliderAdapter(
-    private val listPopular: ArrayList<Eatery>,
+    private val listPopular: ArrayList<EaterySlider>,
     private val viewPager: ViewPager2
 ) : RecyclerView.Adapter<HomePopularSliderAdapter.MyViewHolder>() {
 
     companion object{
-        lateinit var rawListPopular: ArrayList<Eatery>
+        lateinit var rawListPopular: ArrayList<EaterySlider>
     }
     init {
-        rawListPopular = listPopular.map { it.copy() } as ArrayList<Eatery>
+        rawListPopular = listPopular.map { it.copy() } as ArrayList<EaterySlider>
 //        Log.d("heroism","Total: ${rawListPopular.size}")
     }
 
@@ -52,10 +53,10 @@ class HomePopularSliderAdapter(
         holder.namePopular.text = listPopular[position].name
         holder.ratingPopular.text = listPopular[position].rating.toString()
         holder.distancePopular.text = listPopular[position].distance.toString()
-//        holder.imagePopular.setImageResource(listPopular[position].photoBackground)
-        Picasso.get().load(listPopular[position].photoBackground).into(holder.imagePopular)
+        listPopular[position].photoBackground?.let { holder.imagePopular.setImageResource(it) }
+//        Picasso.get().load(listPopular[position].photoBackground).into(holder.imagePopular)
 //        Log.d("heroism","Position : ${position.toString()}, Size: ${listPopular.size}")
-        if(listPopular.size == rawListPopular.size * 6)
+        if(listPopular.size == rawListPopular.size * 9)
             viewPager.post(runnableReset)
         else if(position == listPopular.size - 2)
             viewPager.post(runnable)

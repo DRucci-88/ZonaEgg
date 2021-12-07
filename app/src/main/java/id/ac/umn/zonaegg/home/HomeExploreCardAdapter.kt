@@ -15,8 +15,6 @@ class HomeExploreCardAdapter(
     private val listener: HomeExploreListener
 ) : RecyclerView.Adapter<HomeExploreCardAdapter.ViewHolder>() {
 
-    private val url = "https://firebasestorage.googleapis.com/v0/b/zonaegg-8bf3b.appspot.com/o/Kantin%20UMN%2FMie%20Ayam%20Bakso%20Wonogiri%2FBackground.jpg?alt=media&token=5db0ff06-77bb-409e-a3a8-fbcf8bf71d45"
-
     inner class ViewHolder(view : View) : RecyclerView.ViewHolder(view), View.OnClickListener {
         val imgEateryPhoto : ImageView = view.findViewById(R.id.home_ivExploreEateryPhoto)
         val tvEateryName : TextView = view.findViewById(R.id.home_tvExploreEateryName)

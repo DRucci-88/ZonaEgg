@@ -13,6 +13,7 @@ import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import id.ac.umn.zonaegg.R
 import id.ac.umn.zonaegg.data.Eatery
+import id.ac.umn.zonaegg.data.EaterySlider
 import id.ac.umn.zonaegg.databinding.FragmentHomePopularSliderBinding
 import kotlin.math.abs
 
@@ -20,10 +21,15 @@ class HomePopularSliderFragment : Fragment() {
 
     private lateinit var bind: FragmentHomePopularSliderBinding
     private var sliderHandler = Handler(Looper.getMainLooper())
-    private val popularList: ArrayList<Eatery> = arrayListOf(
-        Eatery("Pondok Makan", "Pondok Makan", "Warteg", 4.9, 2.8, "https://firebasestorage.googleapis.com/v0/b/zonaegg-8bf3b.appspot.com/o/Warteg%2FPondok%20Makan%2FS__4448275.jpg?alt=media&token=1685d49d-f757-4f70-9536-e966bcc746d8"),
-        Eatery("Nyapii!", "Nyapii!", "Restaurant", 5.0, 4.8, "https://firebasestorage.googleapis.com/v0/b/zonaegg-8bf3b.appspot.com/o/Restoran%2FNyapii!%2F120271355_104652764739956_2039778306485302658_n.jpg?alt=media&token=e0f2b9d0-1bef-47cb-803a-de893b059990"),
-        Eatery("Lamian Palace", "Lamian Palace", "Restaurant", 4.9, 4.1, "https://firebasestorage.googleapis.com/v0/b/zonaegg-8bf3b.appspot.com/o/Restoran%2FLamian%20Palace%2FBakpao%20Naga%20Durian%20Cropped.jpg?alt=media&token=60fbadb2-4aa7-45d1-9574-a640eb31eb34")
+    private val popularList: ArrayList<EaterySlider> = arrayListOf(
+//        EaterySlider("Pondok Makan", "Pondok Makan", "Warteg", 4.9, 2.8, R.drawable.background_pondok),
+//        EaterySlider("Nyapii!", "Nyapii!", "Restaurant", 5.0, 4.8, R.drawable.background_nyapi),
+//        EaterySlider("Lamian Palace", "Lamian Palace", "Restaurant", 4.9, 4.1, R.drawable.background_lamian_palace),
+//        EaterySlider("Libro UMN", "Libro UMN", "Canteen",4.8, 0.1, R.drawable.background_libro),
+//        EaterySlider("Mie Ayam Bakso Wonogiri", "Mie Ayam Bakso Wonogiri", "Canteen", 4.5, 0.3, R.drawable.background_wonogori),
+        EaterySlider("O! Fish", "O! Fish", "Restaurant", 4.8, 3.6, R.drawable.background_fish),
+        EaterySlider("Sushi Naru", "Sushi Naru", "Restaurant", 4.2, 3.9, R.drawable.background_sushi_naru),
+        EaterySlider("Raos", "Raos", "Warteg", 4.8, 4.1, R.drawable.background_raos)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,7 +47,7 @@ class HomePopularSliderFragment : Fragment() {
         bind.sliderHomePopular.offscreenPageLimit = 3
         bind.sliderHomePopular.getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
 
-        val compositePageTransformer =  CompositePageTransformer()
+        val compositePageTransformer = CompositePageTransformer()
         compositePageTransformer.addTransformer(MarginPageTransformer(40))
         compositePageTransformer.addTransformer { page, position ->
             val r = 1 - abs(position)
@@ -54,8 +60,8 @@ class HomePopularSliderFragment : Fragment() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
 //                Log.d("heroism",position.toString())
-                sliderHandler.removeCallbacks(sliderRunnable)
-                sliderHandler.postDelayed(sliderRunnable, 3000)
+//                sliderHandler.removeCallbacks(sliderRunnable)
+//                sliderHandler.postDelayed(sliderRunnable, 3000)
             }
         })
         return bind.root

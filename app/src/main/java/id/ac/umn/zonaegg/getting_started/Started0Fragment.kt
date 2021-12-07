@@ -20,7 +20,7 @@ class Started0Fragment : Fragment() {
         val bind = FragmentStarted0Binding.inflate(inflater, container, false)
 
         bind.btnGettingStarted.setOnClickListener {
-            requireActivity().findNavController(R.id.main_nav).navigate(R.id.action_started0Fragment_to_startedViewPagerFragment2)
+//            requireActivity().findNavController(R.id.main_nav).navigate(R.id.action_started0Fragment_to_startedViewPagerFragment2)
             findNavController().navigate(R.id.action_started0Fragment_to_startedViewPagerFragment2)
         }
 
