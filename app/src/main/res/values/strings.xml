@@ -75,7 +75,16 @@
     <string name="digit_four">4</string>
     <string name="digit_five">5</string>
 
+    <!-- Sign In -->
+    <string name="sign_in_with_google">Sign in With Google</string>
+    <string name="example">Example</string>
+    <string name="id">ID</string>
+    <string name="name">Name</string>
+    <string name="email_address">Email address</string>
+    <string name="sign_out">Sign out</string>
+    <string name="image_retreve">Go to Image</string>
+
 
     <!-- Web Client -->
-    <string name="WebClientId">619114856130-uhkud4s1628nfucpju6aa0m1akns2bc8.apps.googleusercontent.com</string>
+    <string name="webClientId">619114856130-uhkud4s1628nfucpju6aa0m1akns2bc8.apps.googleusercontent.com</string>
 </resources>
