@@ -1,4 +1,4 @@
-package id.ac.umn.zonaegg
+package id.ac.umn.zonaegg.testing
 
 import android.os.Bundle
 import android.util.Log
@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import id.ac.umn.zonaegg.data.Eatery
-import id.ac.umn.zonaegg.data.EateryFireStore
 import id.ac.umn.zonaegg.databinding.ActivityTesting4Binding
 import id.ac.umn.zonaegg.home.HomeExploreCardAdapter
 import id.ac.umn.zonaegg.home.HomeExploreListener

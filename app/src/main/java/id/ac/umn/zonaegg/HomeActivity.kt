@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import androidx.core.content.ContentProviderCompat.requireContext
 import id.ac.umn.zonaegg.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
@@ -17,10 +16,15 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
         Log.d("home", "On Create")
         binding.toolbarHome.setOnMenuItemClickListener {
+
             when(it.itemId){
                 R.id.top_bar_home_settings -> {
                     val intent = Intent(this, SettingsActivity::class.java)
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                    startActivity(intent)
+                    true
+                }
+                R.id.acc -> {
+                    val intent = Intent(this, SignInActivity::class.java)
                     startActivity(intent)
                     true
                 }

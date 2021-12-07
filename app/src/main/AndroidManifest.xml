@@ -19,19 +19,19 @@
             android:name=".SignInActivity"
             android:exported="false" />
         <activity
-            android:name=".Testing5Activity"
+            android:name=".testing.Testing5Activity"
             android:exported="false" />
         <activity
-            android:name=".Testing4Activity"
+            android:name=".testing.Testing4Activity"
             android:exported="false" />
         <activity
-            android:name=".Testing3Activity"
+            android:name=".testing.Testing3Activity"
             android:exported="false" />
         <activity
-            android:name=".Testing2Activity"
+            android:name=".testing.Testing2Activity"
             android:exported="false" />
         <activity
-            android:name=".Testing1Activity"
+            android:name=".testing.Testing1Activity"
             android:exported="false" />
         <activity
             android:name=".eatery.EateryActivity"

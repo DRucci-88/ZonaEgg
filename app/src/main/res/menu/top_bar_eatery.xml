@@ -8,8 +8,4 @@
         android:title="@string/add_to_favorites"
         android:icon="@drawable/ic_favorite"
         app:showAsAction="ifRoom" />
-    <item
-        android:title=""
-        android:actionLayout="@layout/padding_4dp"
-        app:showAsAction="ifRoom" />
 </menu>

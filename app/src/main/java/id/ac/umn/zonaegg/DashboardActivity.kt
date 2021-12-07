@@ -32,9 +32,13 @@ class DashboardActivity : AppCompatActivity() {
         binding.signOutBtn.setOnClickListener {
             Firebase.auth.signOut()
             val intent = Intent(this, SignInActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             startActivity(intent)
-            finish()
-
+        }
+        binding.backToHome.setOnClickListener{
+            val intent = Intent(this, HomeActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
         }
 
     }

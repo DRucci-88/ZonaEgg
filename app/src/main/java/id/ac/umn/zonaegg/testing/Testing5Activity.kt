@@ -1,4 +1,4 @@
-package id.ac.umn.zonaegg
+package id.ac.umn.zonaegg.testing
 
 import android.os.Bundle
 import android.util.Log

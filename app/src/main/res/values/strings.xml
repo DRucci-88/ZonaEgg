@@ -87,4 +87,5 @@
 
     <!-- Web Client -->
     <string name="webClientId">619114856130-uhkud4s1628nfucpju6aa0m1akns2bc8.apps.googleusercontent.com</string>
+    <string name="profile">Profile</string>
 </resources>
