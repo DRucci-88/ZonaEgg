@@ -26,7 +26,7 @@ class EateryAdapter(
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.nameEatery.text = list[position].name
         holder.priceEatery.text = "Rp. ${list[position].price}"
-        // holder.photoEatery.setImageResource(list[position].photoUrl)
+        holder.photoEatery.setImageResource(list[position].photoUrl)
 
     }
 

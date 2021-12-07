@@ -12,15 +12,9 @@ class Testing3Activity : AppCompatActivity() {
 
     private lateinit var bind: ActivityTesting3Binding
     private val servingData : ArrayList<Serving> = arrayListOf(
-        Serving("3","Udang Sambal Pete",20000F, R.drawable.udang_sambel_pete),
         Serving("1","Ikan Gurame Sambla Pete",40000F, R.drawable.ikan_gurame_sambal_pete),
         Serving("2","Nasi Ayam sambal pete",35000F, R.drawable.nasi_ayam_sambel_pete),
-        Serving("3","Udang Sambal Pete",20000F, R.drawable.udang_sambel_pete),
-        Serving("1","Ikan Gurame Sambla Pete",40000F, R.drawable.ikan_gurame_sambal_pete),
-        Serving("2","Nasi Ayam sambal pete",35000F, R.drawable.nasi_ayam_sambel_pete),
-        Serving("3","Udang Sambal Pete",20000F, R.drawable.udang_sambel_pete),
-        Serving("1","Ikan Gurame Sambla Pete",40000F, R.drawable.ikan_gurame_sambal_pete),
-        Serving("2","Nasi Ayam sambal pete",35000F, R.drawable.nasi_ayam_sambel_pete)
+        Serving("3","Udang Sambal Pete",20000F, R.drawable.udang_sambel_pete)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
