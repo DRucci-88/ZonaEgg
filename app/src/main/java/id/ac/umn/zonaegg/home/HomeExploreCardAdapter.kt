@@ -8,10 +8,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import id.ac.umn.zonaegg.R
-import id.ac.umn.zonaegg.data.EateryFireStore
+import id.ac.umn.zonaegg.data.Eatery
 
 class HomeExploreCardAdapter(
-    private var dataSet: ArrayList<EateryFireStore>,
+    private var dataSet: ArrayList<Eatery>,
     private val listener: HomeExploreListener
 ) : RecyclerView.Adapter<HomeExploreCardAdapter.ViewHolder>() {
 

@@ -4,27 +4,23 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
-import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.appbar.AppBarLayout
 import id.ac.umn.zonaegg.data.Serving
-import id.ac.umn.zonaegg.databinding.ActivityTesting2Binding
 import id.ac.umn.zonaegg.databinding.ActivityTesting3Binding
-import id.ac.umn.zonaegg.eatery.EateryAdapter
 
 class Testing3Activity : AppCompatActivity() {
 
     private lateinit var bind: ActivityTesting3Binding
     private val servingData : ArrayList<Serving> = arrayListOf(
-        /* Serving("3","Udang Sambal Pete",20000F, R.drawable.udang_sambel_pete),
-        Serving("1","Ikan Gurame Sambla Pete",40000F, R.drawable.ikan_gurame_sambal_pete),
-        Serving("2","Nasi Ayam sambal pete",35000F, R.drawable.nasi_ayam_sambel_pete),
         Serving("3","Udang Sambal Pete",20000F, R.drawable.udang_sambel_pete),
         Serving("1","Ikan Gurame Sambla Pete",40000F, R.drawable.ikan_gurame_sambal_pete),
         Serving("2","Nasi Ayam sambal pete",35000F, R.drawable.nasi_ayam_sambel_pete),
         Serving("3","Udang Sambal Pete",20000F, R.drawable.udang_sambel_pete),
         Serving("1","Ikan Gurame Sambla Pete",40000F, R.drawable.ikan_gurame_sambal_pete),
-        Serving("2","Nasi Ayam sambal pete",35000F, R.drawable.nasi_ayam_sambel_pete), */
-
+        Serving("2","Nasi Ayam sambal pete",35000F, R.drawable.nasi_ayam_sambel_pete),
+        Serving("3","Udang Sambal Pete",20000F, R.drawable.udang_sambel_pete),
+        Serving("1","Ikan Gurame Sambla Pete",40000F, R.drawable.ikan_gurame_sambal_pete),
+        Serving("2","Nasi Ayam sambal pete",35000F, R.drawable.nasi_ayam_sambel_pete)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

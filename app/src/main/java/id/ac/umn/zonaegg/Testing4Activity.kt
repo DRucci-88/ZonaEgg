@@ -26,7 +26,7 @@ class Testing4Activity : AppCompatActivity() {
         bind = ActivityTesting4Binding.inflate(layoutInflater)
         setContentView(bind.root)
 
-        var list = ArrayList<EateryFireStore>()
+        var list = ArrayList<Eatery>()
         var temp: Eatery
 
         db.collection("Kantin UMN")
@@ -56,7 +56,7 @@ class Testing4Activity : AppCompatActivity() {
         val testingListener = object : HomeExploreListener {
             override fun onChangeNav(category: String) {
             }
-            override fun goToDetailEatery(data: EateryFireStore) {
+            override fun goToDetailEatery(data: Eatery) {
             }
         }
 

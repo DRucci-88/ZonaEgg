@@ -25,7 +25,7 @@ class Testing5Activity : AppCompatActivity() {
         bind = ActivityTesting5Binding.inflate(layoutInflater)
         setContentView(bind.root)
 
-        var list = ArrayList<EateryFireStore>()
+        var list = ArrayList<Eatery>()
         var temp: Eatery
 
         db.collection("Kantin UMN")
@@ -33,16 +33,15 @@ class Testing5Activity : AppCompatActivity() {
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     for (t in task.result) {
-                        val temp = t.toObject<EateryFireStore>()
+                        val temp = t.toObject<Eatery>()
                         list.add(temp)
                         Log.d("testing5", temp.toString())
-
                     }
 
                     val testingListener = object : HomeExploreListener {
                         override fun onChangeNav(category: String) {
                         }
-                        override fun goToDetailEatery(data: EateryFireStore) {
+                        override fun goToDetailEatery(data: Eatery) {
                         }
                     }
 

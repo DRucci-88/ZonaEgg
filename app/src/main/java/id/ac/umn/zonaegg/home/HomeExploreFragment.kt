@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import id.ac.umn.zonaegg.data.Eatery
 import id.ac.umn.zonaegg.eatery.EateryActivity
 import id.ac.umn.zonaegg.data.EateryFireStore
 import id.ac.umn.zonaegg.databinding.FragmentHomeExploreBinding
@@ -18,11 +19,15 @@ class HomeExploreFragment : Fragment() {
 
     private lateinit var bind: FragmentHomeExploreBinding
     private val eateryCategory = arrayOf("All","Canteen","Restaurant","Warteg")
-    private val eateryDataRaw : ArrayList<EateryFireStore> = arrayListOf(
-        EateryFireStore("Pondok", "Canteen",4.8, 4.5, "https://firebasestorage.googleapis.com/v0/b/testing-firebase-50139.appspot.com/o/Kantin%20UMN%2FLIBRO%20UMN%2FEspresso.jpg?alt=media&token=b0b5447a-ab48-4036-8552-2c9c552152e7", ),
-        EateryFireStore("Pondok Lagi", "Warteg", 4.5, 4.8, "https://firebasestorage.googleapis.com/v0/b/testing-firebase-50139.appspot.com/o/Kantin%20UMN%2FLIBRO%20UMN%2FEspresso.jpg?alt=media&token=b0b5447a-ab48-4036-8552-2c9c552152e7"),
-        EateryFireStore("Restototo", "Restaurant", 4.9, 4.1, "https://firebasestorage.googleapis.com/v0/b/testing-firebase-50139.appspot.com/o/Kantin%20UMN%2FLIBRO%20UMN%2FEspresso.jpg?alt=media&token=b0b5447a-ab48-4036-8552-2c9c552152e7"),
-        EateryFireStore("Lazada", "Canteen", 5.0, 4.8, "https://firebasestorage.googleapis.com/v0/b/testing-firebase-50139.appspot.com/o/Kantin%20UMN%2FLIBRO%20UMN%2FEspresso.jpg?alt=media&token=b0b5447a-ab48-4036-8552-2c9c552152e7")
+    private val eateryDataRaw : ArrayList<Eatery> = arrayListOf(
+        Eatery("Libro UMN", "Libro UMN", "Canteen",4.8, 0.1, ""),
+        Eatery("Mie Ayam Bakso Wonogiri", "Mie Ayam Bakso Wonogiri", "Canteen", 4.5, 0.3, ""),
+        Eatery("Lamian Palace", "Lamian Palace", "Restaurant", 4.9, 4.1, ""),
+        Eatery("Nyapii!", "Nyapii!", "Restaurant", 5.0, 4.8, ""),
+        Eatery("O! Fish", "O! Fish", "Restaurant", 4.8, 3.6, ""),
+        Eatery("Sushi Naru", "Sushi Naru", "Restaurant", 4.2, 3.9, ""),
+        Eatery("Pondok Makan", "Pondok Makan", "Warteg", 4.9, 2.8, ""),
+        Eatery("Raos", "Raos", "Warteg", 4.8, 4.1, "")
     )
 
     private val exploreListener = object : HomeExploreListener {
@@ -35,7 +40,7 @@ class HomeExploreFragment : Fragment() {
                 "warteg" -> bind.rvExploreCard.swapAdapter(cardWartegAdapter, false)
             }
         }
-        override fun goToDetailEatery(data: EateryFireStore) {
+        override fun goToDetailEatery(data: Eatery) {
             val intent = Intent(requireContext(), EateryActivity::class.java)
             intent.putExtra("data", data)
             requireActivity().startActivity(intent)
@@ -45,17 +50,17 @@ class HomeExploreFragment : Fragment() {
     private val cardCanteenAdapter: HomeExploreCardAdapter by lazy {
         HomeExploreCardAdapter(eateryDataRaw.filter {
             it.category?.lowercase(Locale.getDefault()) ?: "" == "canteen"
-        } as ArrayList<EateryFireStore>, exploreListener)
+        } as ArrayList<Eatery>, exploreListener)
     }
     private val cardRestaurantAdapter: HomeExploreCardAdapter by lazy {
         HomeExploreCardAdapter(eateryDataRaw.filter {
             it.category?.lowercase(Locale.getDefault()) ?: "" == "restaurant"
-        } as ArrayList<EateryFireStore>, exploreListener)
+        } as ArrayList<Eatery>, exploreListener)
     }
     private val cardWartegAdapter: HomeExploreCardAdapter by lazy {
         HomeExploreCardAdapter(eateryDataRaw.filter {
             it.category?.lowercase(Locale.getDefault()) ?: "" == "warteg"
-        } as ArrayList<EateryFireStore>, exploreListener)
+        } as ArrayList<Eatery>, exploreListener)
     }
 
 
